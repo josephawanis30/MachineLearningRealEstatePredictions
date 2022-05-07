@@ -26,6 +26,9 @@ The features of each data point include:
 ## Exploratory Data Analysis
 Please see the EDA.ipynb file in the Exploratory_Data_Analysis folder of this repository.
 
+## Process
+ The preliminary dataset will be used as testing data. We are planning to scrape data from Zillow using Splinter and BeautifulSoup.The Machine learning  model we are using is Multiple Linear regression model. At this point no SQL database needed. But in the presentation stage planning to use database if needed. 
+
 ## Database
 Lorem ipsum
 
