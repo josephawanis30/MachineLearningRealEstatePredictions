@@ -24,7 +24,7 @@ The features of each data point include:
 * Approximate Square Footage
 
 ## Exploratory Data Analysis
-Lorem ipsum
+Please see the EDA.ipynb file in the Exploratory_Data_Analysis folder of this repository.
 
 ## Database
 Lorem ipsum
