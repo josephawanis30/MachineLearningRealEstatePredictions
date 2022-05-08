@@ -1,5 +1,9 @@
 ## MachineLearningRealEstatePredictions
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/94503395/167318946-0efc193c-5f84-4cc3-aab7-82d16fdf4e5c.png"/>
+</p>
+
 “**Group 2: Jean Paul, Cory, Manitha, Joe**”
 The team has been in communication with each other on almost daily bases through available channels.  All 4 team members present, and spending an average time of 1.30 - 2.15hrs.
 
