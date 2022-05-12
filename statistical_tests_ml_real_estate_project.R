@@ -71,3 +71,4 @@ summary(lm(Price ~ sqft + Bedrooms + Bathrooms, data = prop_filter))
 summary(lm(Price ~ sqft + Bedrooms + Bathrooms + age, data = prop_filter))
 summary(lm(Price ~ sqft + Bedrooms + Bathrooms + age + ppsf, data = prop_filter)) # is ppsf redundant?
 
+summary(lm(Price ~ sqft + Bedrooms + Bathrooms + age + zip, data = prop_filter))
