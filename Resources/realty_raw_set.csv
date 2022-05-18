@@ -1,4 +1,4 @@
-ID,Price,Address,zip,status,Subdivision,Year Built,Bedrooms,Bathrooms,Approx SQFT
+﻿ID,Price,Address,zip,status,Subdivision,Year Built,Bedrooms,Bathrooms,Approx SQFT
 1,427167,3231 W MARYLAND AVE,85017,Active,WEST PLAZA 6 LOT 614-787,1958,3,2,1302
 2,400000,5109 E THOMAS RD,85018,Active,PAPAGO VILLAGE,1943,0,0,1358
 3,399900,8020 W STELLA AVE,85303,Active,SHALIMAR,1997,3,2,1505

@@ -38,6 +38,8 @@ scttr <- ggplot(prop_df, aes(x=sqft, y=Price)) + geom_point() + geom_smooth(meth
 scttr
 
 boxplot(prop_filter$Bedrooms)
+table(prop_filter$Bedrooms)
+
 
 prop_filter[which(prop_filter$Bedrooms > 6),]
 
