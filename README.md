@@ -72,6 +72,7 @@ This analysis will use a Jupyter Notebook, using Python 3.7.11, as the primary m
 The primary file is: RandomForestRegressor.ipynb. An outline of the work flow is as follows:  
 1. Import Dependencies
 1. Import Data
+<<<<<<< HEAD
   * Combined data
   * Education data
   * Crime data
@@ -89,6 +90,25 @@ The primary file is: RandomForestRegressor.ipynb. An outline of the work flow is
   1. Fit & Evaluate
   1. Predictions
   1. Decision tree (from Best Model.ipynb)
+=======
+   1. Combined data
+   1. Education data
+   1. Crime data
+1. Data Cleaning
+   1. Renaming columns
+   1. Dropping columns
+   1. Combining tables via joins
+1. Finding Best Parameters
+   1. Using RandomizedSearchCV
+1. Database - SQLite
+   1. Send to SQLite DB
+   1. Retrieve from SQLite DB
+1. Random Forest Model Creation
+   1. Split into train/test
+   1. Fit & Evaluate
+   1. Predictions
+   1. Decision tree (from Best Model.ipynb)
+>>>>>>> cefc85ad7a4bad437c4ac243f36b860ad3ec1631
 1. Export necessary information for storyboard / dashboard
 
 ## Database
