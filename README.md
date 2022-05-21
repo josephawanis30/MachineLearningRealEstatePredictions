@@ -65,8 +65,6 @@ Please see the EDA.ipynb file in the Exploratory_Data_Analysis folder of this re
 Early attempts at models included a multiple linear regressor and a neural network. Due to the particularities of the dataset, neither proved particularly useful models on first pass. The results were weak enough that the originally suggested model of a Random Forest Regressor was chosen as the correct model for the project.  
 
 ## Process
-The preliminary dataset will be used as testing data. We are planning to scrape data from Zillow using Splinter and BeautifulSoup.The Machine learning model we are using is Multiple Linear regression model. At this point no SQL database needed. But in the presentation stage planning to use database if needed.
-
 This analysis will use a Jupyter Notebook, using Python 3.7.11, as the primary method for processing and analyzing the datasets for this project.
 
 The primary file is: RandomForestRegressor.ipynb. An outline of the work flow is as follows:  
