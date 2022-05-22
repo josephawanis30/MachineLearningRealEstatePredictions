@@ -18,6 +18,9 @@ Team’s GitHub profiles:
 * **Manitha**:  manithamanoj
 * **Joe**:  josephawanis30
 
+Slideshow (PDF, currect as of 22 May '22):  
+[SLIDESHOW](https://docs.google.com/presentation/d/1889dAVYWri4bvOVTbIE2Oi-YDmkQFBUS3B0bvUXyTH4/edit?usp=sharing)
+
 ## Overview
 According to the May 6, 2022, Cromford Report,[^1] the housing market in Central Phoenix is just beginning to pick up again after a very slow year for Real Estate sales. Despite the slow year, the median sale price currently sits at $425,000, up 27.6% from May 5, 2021, with a monthly volume of 9,500 sales. This very active market warrants investigation.  
 
@@ -90,10 +93,20 @@ The primary file is: RandomForestRegressor.ipynb. An outline of the work flow is
 1. Export necessary information for storyboard / dashboard
 
 ## Database
-SQlite is the database we are planning to use.
+SQlite is the database we are planning to use. SQLite typically works well as the database engine for low to medium traffic websites (which is to say, 99.9% of all websites).  SQLite is an open source software, also SQLite a an appropriate database tool to power our dashboard. Generally speaking, any site that gets fewer than 100K hits/day should work fine with SQLite. The 100K hits/day figure is a conservative estimate, not a hard upper bound. SQLite has been demonstrated to work with 10 times that amount of traffic.  
+
+For this project, SQLite will serve to hold our final combined dataset in order to provide the data for visualizations on the dashboard in conjunction with the primary purpose - a predicted home price.  
 
 ## Machine Learning
-Multiple Linear Regression
+We used a RandomForestRegressor algorithm (i.e., a supervised learning algorithm and an ensemble of a decision trees algorithm) for modeling:  
+* It is supervised algorithm because during the model training, it learns the mappings between the input features (e.g., Number of bedrooms) and the outputs feature or target (House Price).  
+* It is an assemble algorithm because it combines or assembles multiple decision trees into a final decision to make a more accurate prediction than any underlying algorithm could on its own.  
+
+This model is one of the most popular algorithms for regression problems that is used to predict continuous outcomes due to its simplicity and high accuracy. This algorithm consists of two steps process, i.e., Building n decision tree regressors (estimators), and finding an average prediction across estimators.  
+
+The regression using decision trees starts with the selection of attribute values to determine the best split, and once the best split is found, the dataset is split at that value (i.e., the root node) and the process is repeated for all the other ranges until a stopping condition (e.g., Maximum depth, or a minimum number of samples) is reached. Below is a graph depicting the actual house prices versus the prices predicted by the model.  
+
+![avfhouseprice](images/avfhouseprice.png)
 
 ## Results
 Lorem ipsum
