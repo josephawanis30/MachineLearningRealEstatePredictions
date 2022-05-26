@@ -97,6 +97,10 @@ SQlite is the database we are planning to use. SQLite typically works well as th
 
 For this project, SQLite will serve to hold our final combined dataset in order to provide the data for visualizations on the dashboard in conjunction with the primary purpose - a predicted home price.  
 
+The Entity Relationship Diagram (ERD) for the database can be seen below.  
+
+![erd](images/erd.png)  
+
 ## Machine Learning
 We used a RandomForestRegressor algorithm (i.e., a supervised learning algorithm and an ensemble of a decision trees algorithm) for modeling:  
 * It is supervised algorithm because during the model training, it learns the mappings between the input features (e.g., Number of bedrooms) and the outputs feature or target (House Price).  
