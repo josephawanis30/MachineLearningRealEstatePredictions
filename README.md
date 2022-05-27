@@ -96,13 +96,6 @@ The primary file is: RandomForestRegressor.ipynb. An outline of the work flow is
 SQlite is the database we are planning to use. SQLite typically works well as the database engine for low to medium traffic websites (which is to say, 99.9% of all websites).  SQLite is an open source software, also SQLite a an appropriate database tool to power our dashboard. Generally speaking, any site that gets fewer than 100K hits/day should work fine with SQLite. The 100K hits/day figure is a conservative estimate, not a hard upper bound. SQLite has been demonstrated to work with 10 times that amount of traffic.  
 
 For this project, SQLite will serve to hold our final combined dataset in order to provide the data for visualizations on the dashboard in conjunction with the primary purpose - a predicted home price.  
-<<<<<<< HEAD
-
-The Entity Relationship Diagram (ERD) for the database can be seen below.  
-
-![erd](images/erd.png)  
-=======
->>>>>>> 0c60fd61d9a272b29e1e7d6483e41c8f93e81955
 
 The Entity Relationship Diagram (ERD) for the database can be seen below.  
 
