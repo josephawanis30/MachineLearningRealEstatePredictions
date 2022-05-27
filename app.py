@@ -119,15 +119,16 @@ def ValuePredictor():
         loaded_model = pickle.load(open('housepricepredictions.h5','rb'))
         result = loaded_model.predict(x)
         return render_template('index.html',result=f"${round(result[0],2)}")
+@app.route('/about')
+def about():
+    return render_template('about.html')
+@app.route('/visualization')
+def visualization():
+    return render_template('visualization.html')
+@app.route('/data')
+def data():
+    return render_template('data.html')
 
-# def result():
-#      if request.method == 'POST':
-#         to_predict_list = request.form.to_dict()
-#         to_predict_list=list(to_predict_list.values())
-#         to_predict_list = list(map(float, to_predict_list))
-#         result = ValuePredictor(to_predict_list)
-#         prediction = str(result)
-#     return render_template(“predict.html”,prediction=prediction)
 if __name__ == '__main__':
  app.run(debug=True)
  
