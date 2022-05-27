@@ -104,6 +104,10 @@ The Entity Relationship Diagram (ERD) for the database can be seen below.
 =======
 >>>>>>> 0c60fd61d9a272b29e1e7d6483e41c8f93e81955
 
+The Entity Relationship Diagram (ERD) for the database can be seen below.  
+
+![erd](images/erd.png)  
+
 ## Machine Learning
 We used a RandomForestRegressor algorithm (i.e., a supervised learning algorithm and an ensemble of a decision trees algorithm) for modeling:  
 * It is supervised algorithm because during the model training, it learns the mappings between the input features (e.g., Number of bedrooms) and the outputs feature or target (House Price).  
