@@ -1,9 +1,5 @@
-import os
-from urllib import response
-import pandas as pd 
-import numpy as np 
-import flask
-import pickle
+
+import joblib
 from flask import Flask, render_template, request,redirect
 app=Flask(__name__)
 zip_crime_school={'school_rating': {85003: 94.44,
@@ -106,17 +102,34 @@ def index():
 @app.route('/predict',methods = ['POST'])
 def ValuePredictor():
     if request.method=='POST':
-        sqft=request.form["SQFT"]
-        sqft=float(sqft)
-        Bedrooms=int(request.form["Bedrooms"])
-        Bathrooms=request.form["Bathrooms"]
-        Bathrooms=float(Bathrooms)
-        Year_Built=int(request.form["Year_Built"])
-        Zipcode=int(request.form["zip"])
+        if request.form["SQFT"] =='':
+            sqft=1715.25
+        else:
+            sqft=request.form["SQFT"]
+            sqft=float(sqft)
+        if request.form["Bedrooms"] =='':
+            Bedrooms=3
+        else:
+            Bedrooms=request.form["Bedrooms"]
+            Bedrooms=int(Bedrooms)
+        if request.form["Bathrooms"] =='':
+            Bathrooms=2
+        else:
+            Bathrooms=request.form["Bathrooms"]
+            Bathrooms=float(Bathrooms)
+        if request.form["Year_Built"]=='':
+            Year_Built=1986
+        else:
+            Year_Built=int(request.form["Year_Built"])
+        if request.form["zip"]=='':
+            Zipcode=85015
+        else:
+            Zipcode=int(request.form["zip"])
+       
         School=float(zip_crime_school['school_rating'][Zipcode])
         Crime=float(zip_crime_school['crime_rate'][Zipcode])
         x=[[Zipcode,Year_Built,Bedrooms,Bathrooms,sqft,Crime,School]]
-        loaded_model = pickle.load(open('housepricepredictions.h5','rb'))
+        loaded_model = joblib.load(open('final_model.joblib','rb'))
         result = loaded_model.predict(x)
         return render_template('index.html',result=f"${round(result[0],2)}")
 @app.route('/about')
