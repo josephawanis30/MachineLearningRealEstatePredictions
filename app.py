@@ -1,7 +1,15 @@
-
-import joblib
+import pandas as pd
+from urllib import response
+import pickle
+import os
+from sqlalchemy import create_engine
+import psycopg2
+import sqlalchemy 
 from flask import Flask, render_template, request,redirect
 app=Flask(__name__)
+
+
+
 zip_crime_school={'school_rating': {85003: 94.44,
   85004: 94.44,
   85006: 94.44,
@@ -101,7 +109,7 @@ def index():
     return render_template('index.html')
 @app.route('/predict',methods = ['POST'])
 def ValuePredictor():
-    if request.method=='POST':
+      if request.method=='POST':
         if request.form["SQFT"] =='':
             sqft=1715.25
         else:
@@ -125,11 +133,10 @@ def ValuePredictor():
             Zipcode=85015
         else:
             Zipcode=int(request.form["zip"])
-       
         School=float(zip_crime_school['school_rating'][Zipcode])
         Crime=float(zip_crime_school['crime_rate'][Zipcode])
         x=[[Zipcode,Year_Built,Bedrooms,Bathrooms,sqft,Crime,School]]
-        loaded_model = joblib.load(open('final_model.joblib','rb'))
+        loaded_model = pickle.load(open('housepricepredictions.h5','rb'))
         result = loaded_model.predict(x)
         return render_template('index.html',result=f"${round(result[0],2)}")
 @app.route('/about')
@@ -140,7 +147,16 @@ def visualization():
     return render_template('visualization.html')
 @app.route('/data')
 def data():
-    return render_template('data.html')
+    db_string = f"postgresql://postgres:Mypostgrespwd@127.0.0.1:5432/real_estate_preditions"
+    engine = create_engine(db_string)
+    conn = engine.connect()
+    df = pd.read_sql("SELECT * FROM combined_data", con = engine)
+    df1 = pd.read_sql("SELECT * FROM education_data", con = engine)
+    merged_df=df.merge(df1, how='left', on='zip')
+    merged_df.rename(columns={'price':"House Price",'zip':"Zipcode",'status':"Status",'year_built':'Year','bedrooms':'Bedrooms','bathrooms':'Bathrooms','approx_sqft':'Approx SQFT','crimerate':'Crime Rate','elem_school_district':'Elem School District','highest_rated_school':'School Ratings'},inplace=True)
+    merged_df.reset_index() 
+    housing_data=merged_df[["House Price","Zipcode","Status",'Year','Bedrooms','Bathrooms','Approx SQFT','Crime Rate','Elem School District','School Ratings']]
+    return render_template('data.html',tables=[housing_data.to_html(classes='data table')], titles=housing_data.columns.values)
 
 if __name__ == '__main__':
  app.run(debug=True)
