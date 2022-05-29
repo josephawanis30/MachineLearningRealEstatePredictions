@@ -42,22 +42,42 @@ For each zip code, a crime score was also added by retrieving data from the crim
 
 ## Exploratory Data Analysis
 
-#### This section still in process  
-Please see the EDA.ipynb file in the Exploratory_Data_Analysis folder of this repository.
-(bullet points for now, to be filled in with pngs and text)  
-* Density plot - price
-* Quartile / Mean / Mode table - price
-* Correlation matrix
-* Correlogram
-* 3D plot [sqft x bathrooms x price]
-* Density plot - sqft
-* Quartile / Mean / Mode table - sqft
-* Density plot - bedrooms
-* Quartile / Mean / Mode table - bedrooms
-* Density plot - bathrooms (unnecessary?)
-* Quartile / Mean / Mode table - bathrooms (unnecessary?)
+Please see the EDA.ipynb file in the Exploratory_Data_Analysis folder of this repository.  
 
+Early exploratory analysis of the data included graphs of descriptive statistics, including:  
+
+### Density plot - price
+![density_price](images/density_price.png)  
+
+### Quartile / Mean / Mode table - price
+![price_stats](images/price_stats.png)  
+
+### Correlation matrix
+![new_corr](images/new_correlation.png)  
+
+### Density plot - sqft
+![density_sqft](images/density_sqft.png)  
+
+### Quartile / Mean / Mode table - sqft
+![sqft_stats](images/sqft_stats.png)  
+
+### Density plot - bedrooms
+![density_beds](images/density_beds.png)  
+
+### Quartile / Mean / Mode table - bedrooms
+![beds_stats](images/beds_stats.png)  
+
+### Density plot - bathrooms
+![density_baths](images/density_baths.png)  
+
+### Quartile / Mean / Mode table - bathrooms
+![bath_stats](images/bath_stats.png)  
+
+## Model Exploration
 Early attempts at models included a multiple linear regressor and a neural network. Due to the particularities of the dataset, neither proved particularly useful models on first pass. The results were weak enough that the originally suggested model of a Random Forest Regressor was chosen as the correct model for the project.  
+
+![mlr_segment](images/r_multiple_regression.png)  
+![nn_segment](images/jn_neural_network.png)  
 
 ## Process
 This analysis will use a Jupyter Notebook, using Python 3.7.11, as the primary method for processing and analyzing the datasets for this project.
