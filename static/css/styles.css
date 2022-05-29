@@ -366,7 +366,7 @@ a:focus {
 }
 
 .text-color-2 {
-  color: #e12454;
+  color: #79a6d7;
 }
 
 
@@ -418,19 +418,7 @@ a:focus {
 }
 
 
-.send {
-  position: relative;
-}
 
-.send .form-control {
-  border-radius: 50px;
-  height: 60px;
-  padding-left: 25px;
-  border-color: #eee;
-}
-
-.send .btn {
-  position: absolute;
-  right: 6px;
-  top: 6px;
+.housing-data-table table thead{
+  background-color: #79a6d7;
 }
