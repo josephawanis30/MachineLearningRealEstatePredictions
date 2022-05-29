@@ -125,10 +125,16 @@ The regression using decision trees starts with the selection of attribute value
 ![avfhouseprice](images/avfhouseprice.png)
 
 ## Results
-Lorem ipsum
+Utilizing the RandomizedSearchCV module from sklearn.model_selection, we were able to determine that the best parameters for our model were:  
+
+![best_params](images/best_params.png). 
+
+After the standard protocol for machine learning, including a train / test split of the dataset, we were able to achieve a testing score accuracy of 74.3%.  
+
+![clf](images/clf.png). 
 
 ## Summary
-Lorem ipsum  
+Given a dataset of approximately 2,300 houses and their associated metadata, crime statistics from Phoenix.gov, and education scores from the Arizona Department of Education, we were able to achieve 74.3% accuracy on predicting home sale prices. Given a larger dataset and more robust data for both crime and education, it is possible that this model would improve. Nevertheless, the model predicts home prices well given a minimum number of house and location features.  
 
 ---
 Footnotes:  
