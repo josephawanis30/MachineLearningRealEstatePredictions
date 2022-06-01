@@ -122,7 +122,8 @@ This model is one of the most popular algorithms for regression problems that is
 
 The regression using decision trees starts with the selection of attribute values to determine the best split, and once the best split is found, the dataset is split at that value (i.e., the root node) and the process is repeated for all the other ranges until a stopping condition (e.g., Maximum depth, or a minimum number of samples) is reached. Below is a graph depicting the actual house prices versus the prices predicted by the model.  
 
-![avfhouseprice](images/avfhouseprice.png)
+![avfhouseprice](images/avfhouseprice.png)  
+
 
 ## Results
 Utilizing the RandomizedSearchCV module from sklearn.model_selection, we were able to determine that the best parameters for our model were:  
