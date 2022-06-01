@@ -10,7 +10,7 @@
 * **Manitha**:  manithamanoj
 * **Joe**:  josephawanis30
 
-[SLIDESHOW](https://docs.google.com/presentation/d/1889dAVYWri4bvOVTbIE2Oi-YDmkQFBUS3B0bvUXyTH4/edit?usp=sharing)
+[SLIDESHOW](ML_Real_Estate_Prediction_Slideshow.pdf)
 
 ## Overview
 According to the May 6, 2022, Cromford Report,[^1] the housing market in Central Phoenix is just beginning to pick up again after a very slow year for Real Estate sales. Despite the slow year, the median sale price currently sits at $425,000, up 27.6% from May 5, 2021, with a monthly volume of 9,500 sales. This very active market warrants investigation.  
