@@ -10,7 +10,6 @@
 * **Manitha**:  manithamanoj
 * **Joe**:  josephawanis30
 
-Slideshow (PDF, currect as of 22 May '22):  
 [SLIDESHOW](https://docs.google.com/presentation/d/1889dAVYWri4bvOVTbIE2Oi-YDmkQFBUS3B0bvUXyTH4/edit?usp=sharing)
 
 ## Overview
