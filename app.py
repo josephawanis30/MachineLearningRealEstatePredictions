@@ -1,6 +1,6 @@
 import pandas as pd
 from urllib import response
-import pickle
+import joblib
 import os
 from sqlalchemy import create_engine
 import psycopg2
@@ -136,7 +136,7 @@ def ValuePredictor():
         School=float(zip_crime_school['school_rating'][Zipcode])
         Crime=float(zip_crime_school['crime_rate'][Zipcode])
         x=[[Zipcode,Year_Built,Bedrooms,Bathrooms,sqft,Crime,School]]
-        loaded_model = pickle.load(open('housepricepredictions.h5','rb'))
+        loaded_model = joblib.load(open('final_model.joblib','rb'))
         result = loaded_model.predict(x)
         return render_template('index.html',result=f"${round(result[0],2)}")
 @app.route('/about')
