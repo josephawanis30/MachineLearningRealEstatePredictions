@@ -133,7 +133,7 @@ After the standard protocol for machine learning, including a train / test split
 
 ![clf](images/clf.png)
 ## Dasboard
- Final job was to  create a dashboard to use our model and display the findings. First we have created a  story board using figma web app. Then we have created  a design for the website using HTML. Next we have established a connection with our model that is the Home page using the flask app. We have  also established a connection with Postgres to display data using the flask app. We have used Tableau to create all three  interactive visualizations (average price per sqft per zip,  school ratings per zip, crime rate per zip) and embedded into the visualization page. We have also embedded a pdf which has the entire journey of this project in the About page.
+We created a dashboard to use our model and display our findings. First we have created a  story board using figma web app. Then we have created  a design for the website using HTML. Next we have established a connection with our model that is the Home page using the flask app. We have  also established a connection with Postgres to display data using the flask app. We have used Tableau to create all three  interactive visualizations (average price per sqft per zip,  school ratings per zip, crime rate per zip) and embedded into the visualization page. We have also embedded a pdf which has the entire journey of this project in the About page.
 
 <img width="1440" alt="Screen Shot 2022-06-02 at 5 29 30 PM" src="https://user-images.githubusercontent.com/72629108/171761942-a4177553-5297-4332-8de2-0a4c46ce0e7c.png">
 
