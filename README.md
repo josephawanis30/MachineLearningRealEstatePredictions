@@ -131,7 +131,13 @@ Utilizing the RandomizedSearchCV module from sklearn.model_selection, we were ab
 
 After the standard protocol for machine learning, including a train / test split of the dataset, we were able to achieve a testing score accuracy of 74.3%.  
 
-![clf](images/clf.png)  
+![clf](images/clf.png)
+## Dasboard
+ Final job was to  create a dashboard to use our model and display the findings. First we have created a  story board using figma web app. Then we have created  a design for the website using HTML. Next we have established a connection with our model that is the Home page using the flask app. We have  also established a connection with Postgres to display data using the flask app. We have used Tableau to create all three  interactive visualizations (average price per sqft per zip,  school ratings per zip, crime rate per zip) and embedded into the visualization page. We have also embedded a pdf which has the entire journey of this project in the About page.
+
+<img width="1440" alt="Screen Shot 2022-06-02 at 5 29 30 PM" src="https://user-images.githubusercontent.com/72629108/171761942-a4177553-5297-4332-8de2-0a4c46ce0e7c.png">
+
+
 
 ## Summary
 Given a dataset of approximately 2,300 houses and their associated metadata, crime statistics from Phoenix.gov, and education scores from the Arizona Department of Education, we were able to achieve 74.3% accuracy on predicting home sale prices. Given a larger dataset and more robust data for both crime and education, it is possible that this model would improve. Nevertheless, the model predicts home prices well given a minimum number of house and location features.  
